@@ -5,149 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>نظام الوكيل 60 - استعد وقتك</title>
     <style>
-        /* [كود التصميم CSS لم يتغير، وهو احترافي] */
+        /* === الإعدادات الاحترافية الجديدة (لإثارة المشترين) === */
         :root {
-            --primary-color: #007bff;
-            --success-color: #28a745;
+            --primary-color: #0070ba; /* PayPal Blue for CTAs */
+            --secondary-color: #1e8449; /* Deep Green for Trust */
             --warning-color: #ffc107;
             --light-color: #f8f9fa;
-            --dark-color: #343a40;
-            --text-color: #212529;
-            --bg-color: #ffffff;
+            --dark-color: #2c3e50; /* Darker for Depth */
+            --text-color: #333;
+            --bg-color: #e9ecef; /* Light Grey Background */
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
+            direction: rtl;
+            text-align: right;
         }
         .container {
             max-width: 900px;
-            margin: 20px auto;
+            margin: 0 auto;
             padding: 0 20px;
         }
-        /* === قسم "صفحة البيع" === */
+        /* شريط الثقة العلوي */
+        .trust-bar {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        /* الواجهة الرئيسية بتأثير 3D */
         #sales-page {
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 24px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* ظل ثلاثي الأبعاد */
+            margin-bottom: 40px;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--dark-color);
             text-align: center;
+            margin-top: 0;
+            line-height: 1.2;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: var(--primary-color);
             text-align: center;
-            margin-top: 0;
+            margin-bottom: 30px;
         }
         h3 {
             font-size: 1.4rem;
             color: var(--dark-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 5px;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 8px;
+            margin-top: 30px;
         }
+        /* صندوق التحذير والفوائد (Callout) */
         .callout {
             padding: 20px;
             border-radius: 8px;
-            margin: 20px 0;
-            border-left: 5px solid;
+            margin: 15px 0;
+            border-right: 5px solid; /* تغيير اتجاه الحدود */
         }
         .callout-warning {
-            background-color: #fff9e6;
+            background-color: #fff3cd;
             border-color: var(--warning-color);
+            color: #856404;
         }
         .callout-success {
-            background-color: #e9f7ec;
+            background-color: #d4edda;
             border-color: var(--success-color);
+            color: #155724;
         }
         .columns {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
-        }
-        ul.checklist {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul.checklist li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 10px;
+            margin-top: 20px;
         }
         ul.checklist li::before {
-            content: '✅'; /* Green Check */
+            content: '✅';
             position: absolute;
-            left: 0;
+            right: 0; /* Align checklist icon to the right */
         }
-        ul.checklist.negative li::before {
-            content: '❌'; /* Red X */
-        }
-        .testimonial {
-            font-style: italic;
-            background-color: var(--light-color);
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 5px solid #ccc;
-        }
+        /* زر الشراء (CTA Button) */
         .cta-button {
             display: block;
             width: 90%;
-            max-width: 400px;
-            margin: 30px auto;
+            max-width: 450px;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #0070ba; /* PayPal Blue */
+            background-color: var(--primary-color);
             color: white;
             text-decoration: none;
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: bold;
-            border-radius: 8px;
-            transition: transform 0.2s;
+            border-radius: 50px; /* شكل عصري */
+            box-shadow: 0 8px 15px rgba(0, 112, 186, 0.4); /* ظل مثير */
+            transition: background-color 0.3s, transform 0.2s;
         }
         .cta-button:hover {
-            transform: scale(1.05);
+            background-color: #005f9e;
+            transform: translateY(-3px); /* حركة خفيفة عند الوقوف عليه */
         }
-        .guarantee {
+        /* صندوق الضمان الأماني */
+        .guarantee-box {
+            background-color: #ecf0f1;
+            border: 2px solid var(--secondary-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px auto;
             text-align: center;
+            font-size: 1.1rem;
             font-weight: bold;
-            color: var(--dark-color);
         }
 
-        /* === قسم "المنتج" (مخفي افتراضياً) === */
+        /* === المنتج (مخفي) === */
         #product-content {
             display: none;
             margin-top: 40px;
-            padding: 20px;
-            background-color: var(--light-color);
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         .module {
-            margin-bottom: 20px;
-            background: #fff;
-            padding: 15px;
-            border-radius: 5px;
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: var(--light-color);
         }
-        .video-placeholder {
-            width: 100%;
-            height: 300px;
-            background-color: #333;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            border-radius: 5px;
-        }
+        .module p strong { color: var(--secondary-color); }
     </style>
 </head>
 <body>
+
+    <div class="trust-bar">
+        🔥 ضمان استعادة الأموال 100% | المنتج مُفعَّل وجاهز للربط بـ PayPal
+    </div>
 
     <div class="container">
 
@@ -156,8 +162,8 @@
             <h2>أطلق العنان لـ "وكيل ذكاء اصطناعي" يعمل 24/7، يحجز مواعيدك، ويرد على عملائك... وأطلقه في 60 دقيقة فقط.</h2>
 
             <div class="callout callout-warning">
-                <strong>هذا ليس "شات بوت" غبي.</strong><br>
-                هذا "نظام وكيل" (Agent System) يتصل بتقويمك، يقرأ إيميلاتك، ويفهم سياق عملك.
+                <strong>توقف عن العمل الشاق.</strong><br>
+                هذا النظام يحررك من عبء العمل الإداري. نحن نبيع لك "الحرية" و"التركيز" على عملك الرئيسي.
             </div>
 
             <h3>هل هذا النظام لك؟</h3>
@@ -167,27 +173,25 @@
                         <li>طبيب أسنان أو صاحب عيادة يكره حجز المواعيد يدوياً.</li>
                         <li>محامي أو مستشار يغرق في الإيميلات المتكررة.</li>
                         <li>صاحب مطعم يريد أتمتة الطلبات والاستفسارات.</li>
-                        <li>أي مهني يريد استعادة "وقته" من العمل الإداري.</li>
                     </ul>
                 </div>
                 <div>
                     <ul class="checklist negative">
                         <li>تبحث عن "روبوت" يتحدث عن الطقس.</li>
-                        <li>لديك الوقت الكافي لإدارة كل شيء يدوياً.</li>
-                        <li>تفضل توظيف مساعد بشري بـ 3000 دولار شهرياً.</li>
+                        <li>تظن أن مساعداً بشرياً بـ 3000 دولار شهرياً أفضل.</li>
+                        <li>ليس لديك إرادة لإنفاق 60 دقيقة لإنهاء هذا التحدي.</li>
                     </ul>
                 </div>
             </div>
 
-            <h3>ماذا ستبني في الساعة القادمة:</h3>
-            <div class="callout">
-                <strong>الوحدة 1+2: وكيل حجز المواعيد (25 دقيقة)</strong><br>
-                سنبني وكيلاً يتصل بـ Google Calendar الخاص بك. (آلياً 100%).
+            <h3>ماذا ستبني في الساعة القادمة: (نظام مبسط)</h3>
+            <div class="callout callout-success">
+                <strong>الوحدة 2: وكيل حجز المواعيد (25 دقيقة):</strong> سنبني موظف استقبال آلي يتصل بجدولك لحجز المواعيد بذكاء.
             </div>
-            <div class="callout">
-                <strong>الوحدة 3: وكيل الردود الذكية (20 دقيقة)</strong><br>
-                سنقوم بتدريب الوكيل على بيانات عملك. سيجيب على 80% من أسئلة العملاء فوراً.
+            <div class="callout callout-success">
+                <strong>الوحدة 3: وكيل تصفية الإيميلات (20 دقيقة):</strong> ستتوقف عن رؤية 80% من الإيميلات العادية.
             </div>
+
 
             <h3>عملاؤنا استعادوا وقتهم:</h3>
             <div class="testimonial">
@@ -195,9 +199,8 @@
                 <strong>— د. سارة، (طبيبة أسنان)</strong>
             </div>
 
-            <div class="callout callout-success">
-                <h3>احصل على "نظام الوكيل 60" الآن.</h3>
-                <p style="font-size: 1.2rem;">استرجع وقتك مقابل 149 دولار (دفعة واحدة).</p>
+            <div class="callout-success">
+                <h3 style="text-align: center;">احصل على "نظام الوكيل 60" الآن.</h3>
                 
                 <a href="https://paypal.me/tmed5976" 
                    class="cta-button" 
@@ -205,7 +208,9 @@
                    **الدفع الفوري الآن عبر PayPal**
                 </a>
                 
-                <p class="guarantee">ضماننا: إذا لم يوفر لك هذا النظام ساعة واحدة على الأقل في أسبوعك الأول، استرجع أموالك بالكامل.</p>
+                <div class="guarantee-box">
+                    ضماننا: إذا لم يوفر لك هذا النظام ساعة واحدة على الأقل في أسبوعك الأول، استرجع أموالك بالكامل.
+                </div>
             </div>
         </div>
 
@@ -224,8 +229,8 @@
             <div class="module">
                 <h3>الوحدة 1: تدريب "الموظف الجديد" (15 دقيقة)</h3>
                 <div style="padding: 15px; background: #e9ecef; border-radius: 6px; margin-top: 10px;">
-                    <p><strong>كيف نُدربه؟</strong> عامل وكيل AI كـ 'موظف استقبال جديد'. قم بتزويده بالمعلومات الأساسية لعملك: مواعيد العمل، قائمة الخدمات، وأسعارك. </p>
-                    <p><strong>الهدف:</strong> جعل الوكيل يعرف عملك أفضل من أي موظف جديد.</p>
+                    <p><strong>كيف نُدربه؟</strong> عامل وكيل AI كـ 'موظف استقبال جديد'. قم بتزويده بالمعلومات الضرورية: مواعيد العمل، قائمة الخدمات، وأسعارك. </p>
+                    <p><strong>الهدف:</strong> أن يكون الوكيل يعرف عملك أفضل من أي موظف جديد.</p>
                 </div>
             </div>
 
@@ -243,8 +248,8 @@
                 <h3>الوحدة 3: وكيل "تصفية الإيميلات" (15 دقيقة)</h3>
                 <p>ربط الوكيل ببريدك الإلكتروني لتصنيف الردود.</p>
                 <div style="padding: 15px; background: #e9ecef; border-radius: 6px; margin-top: 10px;">
-                    <p><strong>المهمة:</strong> قم بإعداد 'مُصفٍّ' (Filter) يقرأ صندوق الوارد الخاص بك. أي إيميل يسأل عن سعر أو خدمة عامة، يتم الرد عليه آلياً. الإيميلات المهمة أو المعقدة تظهر لك أنت فقط.</p>
-                    <p><strong>النتيجة:</strong> أنت تقرأ فقط 20% من الإيميلات التي تتطلب قرارك. الباقي يتم الاعتناء به آلياً.</p>
+                    <p><strong>المهمة:</strong> قم بإعداد 'مُصفٍّ' (Filter) يقرأ صندوق الوارد الخاص بك. أي إيميل يسأل عن سعر أو خدمة عامة، يتم الرد عليه آلياً. الإيميلات المعقدة (مثل 'شراكة جديدة') يتم تصنيفها ووضع علامة عليها لتراها أنت فقط.</p>
+                    <p><strong>النتيجة:</strong> أنت تقرأ فقط 20% من الإيميلات التي تتطلب قرارك كصاحب عمل.</p>
                 </div>
             </div>
 
@@ -252,7 +257,7 @@
                 <h3>الوحدة 4: الإطلاق وربط واتساب (5 دقائق)</h3>
                 <p>زرع الوكيل في موقعك وربطه بواتساب.</p>
                 <div style="padding: 15px; background: #e9ecef; border-radius: 6px; margin-top: 10px;">
-                    <p><strong>الخطوة النهائية:</strong> قم بنسخ 'كود التشغيل' (Embed Code) الخاص بوكيلك. الصقه في موقعك أو قم بتفعيل الرد الآلي على WhatsApp Business. تهانينا، لديك الآن موظف يعمل 24/7.</p>
+                    <p><strong>الخطوة النهائية:</strong> قم بنسخ 'كود التضمين' (Embed Code) الخاص بوكيلك. الصقه في موقعك الإلكتروني أو اضبطه للرد على رسائل WhatsApp Business. تهانينا، لديك الآن موظف يعمل 24/7.</p>
                 </div>
             </div>
 
