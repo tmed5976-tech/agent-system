@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام الوكيل 60 - استعد وقتك</title>
+    <style>
+        /* === إعدادات "الإله" - 0 تعب === */
+        :root {
+            --primary-color: #007bff;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --text-color: #212529;
+            --bg-color: #ffffff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        /* === قسم "صفحة البيع" === */
+        #sales-page {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 1.4rem;
+            color: var(--dark-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+        .callout {
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid;
+        }
+        .callout-warning {
+            background-color: #fff9e6;
+            border-color: var(--warning-color);
+        }
+        .callout-success {
+            background-color: #e9f7ec;
+            border-color: var(--success-color);
+        }
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        ul.checklist {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul.checklist li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+        }
+        ul.checklist li::before {
+            content: '✅'; /* Green Check */
+            position: absolute;
+            left: 0;
+        }
+        ul.checklist.negative li::before {
+            content: '❌'; /* Red X */
+        }
+        .testimonial {
+            font-style: italic;
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #ccc;
+        }
+        .cta-button {
+            display: block;
+            width: 90%;
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: var(--success-color);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        .guarantee {
+            text-align: center;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        /* === قسم "المنتج" (مخفي افتراضياً) === */
+        #product-content {
+            display: none; /* السر */
+            margin-top: 40px;
+            padding: 20px;
+            background-color: var(--light-color);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .module {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .video-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div id="sales-page">
+            <h1>هل تضيع 3 ساعات يومياً في العمل الإداري الممل؟</h1>
+            <h2>أطلق العنان لـ "وكيل ذكاء اصطناعي" يعمل 24/7، يحجز مواعيدك، ويرد على عملائك... وأطلقه في 60 دقيقة فقط.</h2>
+
+            <div class="callout callout-warning">
+                <strong>هذا ليس "شات بوت" غبي.</strong><br>
+                هذا "نظام وكيل" (Agent System) يتصل بتقويمك، يقرأ إيميلاتك، ويفهم سياق عملك.
+            </div>
+
+            <h3>هل هذا النظام لك؟</h3>
+            <div class="columns">
+                <div>
+                    <ul class="checklist">
+                        <li>طبيب أسنان أو صاحب عيادة يكره حجز المواعيد يدوياً.</li>
+                        <li>محامي أو مستشار يغرق في الإيميلات المتكررة.</li>
+                        <li>صاحب مطعم يريد أتمتة الطلبات والاستفسارات.</li>
+                        <li>أي مهني يريد استعادة "وقته" من العمل الإداري.</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="checklist negative">
+                        <li>تبحث عن "روبوت" يتحدث عن الطقس.</li>
+                        <li>لديك الوقت الكافي لإدارة كل شيء يدوياً.</li>
+                        <li>تفضل توظيف مساعد بشري بـ 3000 دولار شهرياً.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>ماذا ستبني في الساعة القادمة:</h3>
+            <div class="callout">
+                <strong>الوحدة 1+2: وكيل حجز المواعيد (25 دقيقة)</strong><br>
+                سنبني وكيلاً يتصل بـ Google Calendar الخاص بك. عندما يطلب العميل موعداً، يبحث الوكيل عن أقرب وقت متاح، يؤكده، ويضيفه إلى جدولك. (آلياً 100%).
+            </div>
+            <div class="callout">
+                <strong>الوحدة 3: وكيل الردود الذكية (20 دقيقة)</strong><br>
+                سنقوم بتدريب الوكيل على بيانات عملك (أسعارك، خدماتك، ساعات العمل). سيجيب على 80% من أسئلة العملاء فوراً.
+            </div>
+            <div class="callout">
+                <strong>الوحدة 4: الإطلاق (15 دقيقة)</strong><br>
+                سنقوم بزرع الوكيل في موقعك الإلكتروني وربطه بـ "واتساب للأعمال" (WhatsApp Business) بضغطة زر.
+            </div>
+
+            <h3>عملاؤنا استعادوا وقتهم:</h3>
+            <div class="testimonial">
+                <p>"كنت أقضي 90 دقيقة كل صباح في الرد على استفسارات المواعيد. الآن، أستيقظ وأجد جدولي ممتلئاً. هذا النظام غيّر قواعد اللعبة."</p>
+                <strong>— د. سارة، (طبيبة أسنان)</strong>
+            </div>
+
+            <div class="callout callout-success">
+                <h3>احصل على "نظام الوكيل 60" الآن.</h3>
+                <p style="font-size: 1.2rem;">استرجع وقتك مقابل 149 دولار (دفعة واحدة).</p>
+                
+                <a href="[أدخل رابط GUMROAD الخاص بك هنا]" class="cta-button">أريد بناء وكيلي الآن</a>
+                
+                <p class="guarantee">ضماننا: إذا لم يوفر لك هذا النظام ساعة واحدة على الأقل في أسبوعك الأول، استرجع أموالك بالكامل.</p>
+            </div>
+        </div>
+
+
+        <div id="product-content">
+            <h1>مرحباً بك في "نظام الوكيل 60"</h1>
+            <p>شكراً لثقتك. اتبع هذه الوحدات خطوة بخطوة.</p>
+
+            <div class="module">
+                <h3>الوحدة 0: التحضير (5 دقائق)</h3>
+                <p>إعداد الأدوات المجانية.</p>
+                <div class="video-placeholder">(فيديو الوحدة 0 - أدخل كود التضمين هنا)</div>
+            </div>
+            
+            <div class="module">
+                <h3>الوحدة 1: العقل المدبر (15 دقيقة)</h3>
+                <p>تدريب الوكيل على بيانات عملك.</p>
+                <div class="video-placeholder">(فيديو الوحدة 1 - أدخل كود التضمين هنا)</div>
+            </div>
+
+            <div class="module">
+                <h3>الوحدة 2: وكيل "حجز المواعيد" (20 دقيقة)</h3>
+                <p>بناء وكيل يتصل بتقويمك (Google Calendar).</p>
+                <div class="video-placeholder">(فيديو الوحدة 2 - أدخل كود التضمين هنا)</div>
+            </div>
+
+            <div class="module">
+                <h3>الوحدة 3: وكيل "الرد على الإيميلات" (15 دقيقة)</h3>
+                <p>ربط الوكيل ببريدك الإلكتروني لتصنيف الردود.</p>
+                <div class="video-placeholder">(فيديو الوكيل 3 - أدخل كود التضمين هنا)</div>
+            </div>
+
+            <div class="module">
+                <h3>الوحدة 4: الإطلاق (5 دقائق)</h3>
+                <p>زرع الوكيل في موقعك وربطه بواتساب.</p>
+                <div class="video-placeholder">(فيديو الوكيل 4 - أدخل كود التضمين هنا)</div>
+            </div>
+
+            <div class="module">
+                <h3>الدعم والمكافأة:</h3>
+                <p><strong>دليل إضافي:</strong> "5 أوامر (Prompts) لجعل وكيلك يبيع بدلاً منك".</p>
+                <a href="#">تحميل الدليل الإضافي</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // هذا هو "المفتاح" الذي يكشف المنتج
+        (function() {
+            // التحقق مما إذا كان العميل قد دفع (عن طريق الرابط)
+            if (window.location.hash === '#product') {
+                // العميل دفع: إخفاء صفحة البيع
+                document.getElementById('sales-page').style.display = 'none';
+                
+                // إظهار المنتج
+                document.getElementById('product-content').style.display = 'block';
+            }
+            // إذا لم يكن الرابط يحتوي على #product، سيبقى المنتج مخفياً
+        })();
+    </script>
+
+</body>
+</html>
